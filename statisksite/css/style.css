@@ -1,4 +1,114 @@
 body {
-  background-color: #323232;
+  background-color: #1e1e1e;
   color: white;
+  font-family: "Koulen", sans-serif;
+  text-align: center;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1 {
+  font-size: 200px;
+  margin: -40px;
+}
+
+h1 span {
+  color: #d84727; /* Sørger for at 'Я' er rød */
+}
+
+h2 {
+  font-size: 32px; /* Gør 'CATEGORIES' større */
+  font-weight: bold;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: right;
+  padding: 10px 20px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 50px;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out, text-shadow 0.2s ease-in-out;
+}
+
+nav ul li a:hover {
+  color: #d84727; /* Ændrer farven ved hover */
+  text-shadow: 2px 2px 5px rgba(216, 71, 39, 0.5); /* Lidt skyggeeffekt */
+}
+
+/* Index - katogorier */
+.category_list_container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin: 0px 100px;
+}
+
+.category_list_container a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ea3b2e;
+  color: white;
+  font-size: 18px;
+  text-transform: uppercase;
+  padding: 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.category_list_container a:hover {
+  background-color: #f7837b;
+}
+
+/* Produktliste */
+.product_list_container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 2rem;
+  margin: 20px;
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: span 3;
+}
+
+/* Mobil */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 80px; /* Gør overskriften mindre på mobil */
+  }
+
+  .category_list_container {
+    grid-template-columns: 1fr; /* Ændrer fra 3 kolonner til 1 kolonne */
+    gap: 10px;
+    margin: 0 10%;
+  }
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1024px) {
+  h1 {
+    font-size: 150px; /* Mindre end desktop, men større end mobil */
+  }
+
+  .category_list_container {
+    grid-template-columns: repeat(2, 1fr); /* To kolonner i stedet for tre */
+    margin: 0 10%;
+  }
 }
