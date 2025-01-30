@@ -21,6 +21,7 @@ h1 span {
 h2 {
   font-size: 30px; /* Gør 'CATEGORIES' større */
   text-align: center;
+  margin-top: 50px;
 }
 
 /* Kun styling for h-tags og p-tags i product.html */
@@ -46,6 +47,40 @@ header {
 /* Kun for index.html */
 .index-header {
   justify-content: flex-end; /* Flytter menuen helt til højre */
+}
+
+/* Logo styling */
+.logo {
+  text-decoration: none; /* Fjerner understregning */
+  color: inherit; /* Bevarer den normale tekstfarve */
+  cursor: pointer;
+  display: inline-block; /* Bevarer den naturlige størrelse */
+}
+
+/* Styler selve logo-teksten */
+.logo h1 {
+  font-family: "Koulen", sans-serif; /* Sikrer skrifttypen */
+  font-size: 35px; /* Justerer størrelsen */
+  font-weight: bold; /* Gør teksten fed */
+  text-transform: uppercase; /* Gør alle bogstaver store */
+  letter-spacing: 2px; /* Giver lidt luft mellem bogstaverne */
+  margin: 0; /* Sørger for ingen ekstra mellemrum */
+  color: white; /* Standard tekstfarve */
+  display: flex;
+  align-items: center;
+}
+
+/* Burger-menu styling */
+.burger-menu {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Skjuler checkboxen */
+#burger-toggle {
+  display: none;
 }
 
 nav ul {
@@ -137,6 +172,8 @@ nav ul li a:hover {
 
 .product_info h3 {
   font-size: 1rem;
+  margin-top: 5px;
+  margin-bottom: 10px;
 }
 
 .product_info p {
@@ -202,6 +239,7 @@ nav ul li a:hover {
   border-radius: 5px;
   text-transform: uppercase; /* Gør teksten store bogstaver */
   text-align: center;
+  color: #ea3b2e;
 }
 
 /* Bestemt product */
@@ -210,7 +248,7 @@ nav ul li a:hover {
   gap: 20px; /* Afstand mellem billede og tekst */
   max-width: 900px; /* Maks bredde for at forhindre for stor strækning */
   margin: auto; /* Centrerer containeren på siden */
-  margin-top: 40px;
+  margin-top: 60px;
   font-family: "Roboto", sans-serif;
 }
 
@@ -255,7 +293,45 @@ nav ul li a:hover {
 @media (max-width: 768px) {
   h1 {
     font-size: 70px; /* Gør overskriften mindre på mobil */
-    margin-top: 5px;
+    margin-top: -10px;
+  }
+
+  .burger-menu {
+    display: block; /* Gør menu-ikonet synligt */
+    position: relative;
+    top: -10px;
+    right: 0px;
+  }
+
+  nav {
+    display: none; /* Skjuler menuen som standard */
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.9);
+    width: 30%;
+    z-index: 100;
+  }
+
+  nav ul {
+    padding: 0;
+    margin: 0;
+    flex-direction: column;
+    gap: 0px;
+  }
+
+  nav ul li {
+    text-align: center;
+  }
+
+  nav ul li a {
+    display: block;
+    padding: 15px;
+  }
+
+  /* Når checkboxen er markeret, vis menuen */
+  #burger-toggle:checked + .burger-menu + nav {
+    display: block;
   }
 
   .category_list_container {
