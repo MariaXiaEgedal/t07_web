@@ -23,11 +23,29 @@ h2 {
   text-align: center;
 }
 
+/* Kun styling for h-tags og p-tags i product.html */
+.productContainer h2 {
+  font-size: 32px; /* Justér størrelsen */
+  text-align: left;
+  margin: 10px 0;
+}
+
+.productContainer h3 {
+  font-size: 20px;
+  font-weight: 100;
+  margin: 0;
+}
+
 /* Header */
 header {
   display: flex;
   justify-content: space-between;
   padding: 10px 20px;
+}
+
+/* Kun for index.html */
+.index-header {
+  justify-content: flex-end; /* Flytter menuen helt til højre */
 }
 
 nav ul {
@@ -46,8 +64,8 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: #d84727; /* Ændrer farven ved hover */
-  text-shadow: 2px 2px 5px rgba(216, 71, 39, 0.5); /* Lidt skyggeeffekt */
+  color: #d84727;
+  text-shadow: 2px 2px 5px rgba(216, 71, 39, 0.5);
 }
 
 /* Index - katogorier */
@@ -81,10 +99,18 @@ nav ul li a:hover {
   grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
   gap: 2rem;
   margin: 20px;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Gør hvert produkt til en subgrid ??????*/
+.product,
+.product_onsale,
+.product_soldout,
+.product_onsale_soldout {
   display: grid;
   grid-template-rows: subgrid;
-  grid-row: span 3;
-  font-family: "Roboto", sans-serif;
+  grid-row: span 2; /* Sørger for ensartet højde */
+  gap: 0; /* Justerer afstand for bedre alignment */
 }
 
 .product_list_container a {
@@ -93,12 +119,12 @@ nav ul li a:hover {
 }
 
 /* Generelt for produkter */
-.product-link {
+.product_link {
   border: 3px solid transparent; /* Start uden ramme */
   transition: border-color 0.3s ease-in-out; /* Glidende overgang */
 }
 
-.product-link:hover {
+.product_link:hover {
   border-color: #d84727; /* Rød ramme ved hover */
 }
 
@@ -110,7 +136,7 @@ nav ul li a:hover {
 }
 
 .product_info h3 {
-  font-size: 1rem; /* Ensures text is readable but not too big */
+  font-size: 1rem;
 }
 
 .product_info p {
@@ -119,11 +145,13 @@ nav ul li a:hover {
 }
 
 .product_info p:last-child {
-  margin-left: auto; /* Pushes price to the right */
+  margin-left: auto;
+  font-weight: bold;
 }
 
 /* Produkter på udsalg */
-.product_onsale {
+.product_onsale,
+.product_onsale_soldout {
   position: relative; /* Sørger for, at elementer indeni kan placeres absolut */
 }
 
@@ -136,24 +164,29 @@ nav ul li a:hover {
   z-index: 10;
 }
 
-.price-container {
+.price_container {
   display: flex;
+  gap: 10px;
 }
-.old-price {
+
+.old_price {
   text-decoration: line-through;
   color: gray; /* Gør den gamle pris mindre fremtrædende */
 }
 
-.new-price {
+.new_price {
   color: #d84727; /* Rød farve til rabatpris */
+  font-weight: bold;
 }
 
 /* Udsolgte produkter */
-.product_soldout img {
+.product_soldout img,
+.product_onsale_soldout img {
   opacity: 0.5; /* Gør billedet mere gennemsigtigt */
 }
 
 .image_container {
+  margin: 0;
   position: relative; /* Gør det muligt at placere indholdet absolut i forhold til billedet */
 }
 
@@ -171,7 +204,52 @@ nav ul li a:hover {
   text-align: center;
 }
 
-/* Produkter på udsalg og udsolgt */
+/* Bestemt product */
+.productContainer {
+  display: flex;
+  gap: 20px; /* Afstand mellem billede og tekst */
+  max-width: 900px; /* Maks bredde for at forhindre for stor strækning */
+  margin: auto; /* Centrerer containeren på siden */
+  margin-top: 40px;
+  font-family: "Roboto", sans-serif;
+}
+
+.productContainer .inventory_number {
+  font-size: 12px; /* Justér tekststørrelse */
+  color: #bbbbbb; /* Lidt lysere tekst */
+  margin: 0;
+}
+
+.productContainer .price_container {
+  font-size: 20px;
+  margin: 20px 0;
+}
+
+.size_container {
+  margin-top: 30px;
+}
+.size_options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+  gap: 10px;
+  text-align: center;
+}
+
+.size {
+  background-color: #939393;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.add-to-cart {
+  background-color: #ea3b2e;
+  color: white;
+  padding: 10px 30px;
+  border: none;
+  cursor: pointer;
+  margin-top: 15px;
+  font-size: 18px;
+}
 
 /* Mobil */
 @media (max-width: 768px) {
@@ -187,7 +265,17 @@ nav ul li a:hover {
   }
 
   .product_list_container {
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+  }
+
+  /* Produktsiden */
+  .productContainer {
+    display: flex;
+    flex-direction: column; /* Ændrer fra række til kolonne */
+    align-items: center; /* Centrerer elementer */
+    gap: 40px;
+    margin: 0 20px;
   }
 }
 

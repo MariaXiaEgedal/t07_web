@@ -9,7 +9,12 @@
       href="https://fonts.googleapis.com/css2?family=Koulen&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Koulen&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/style.css" />
+    <script src="js/product.js" defer></script>
     <title>Product</title>
   </head>
 
@@ -29,29 +34,45 @@
       </nav>
     </header>
 
-    <main>
-      <section class="info">
-        <div>
-          <img
-            src="https://kea-alt-del.dk/t7/images/webp/640/1164.webp"
-            alt="Blue T20"
-          />
+    <main class="productContainer">
+      <figure class="image_container">
+        <span class="discount-label">-34%</span>
+        <img
+          src="https://kea-alt-del.dk/t7/images/webp/640/1163.webp"
+          alt="Sahara Team India Fanwear Round Neck Jersey"
+          class="productImage"
+        />
+      </figure>
+
+      <div class="singel_product_info">
+        <h3 class="brand">Nike</h3>
+        <h2 class="product_name">
+          Sahara Team India Fanwear Round Neck Jersey
+        </h2>
+        <p class="inventory_number">Inventory number 1163</p>
+
+        <div class="price_container">
+          <p class="old_price">DKK 1595,-</p>
+          <p class="new_price">DKK 1295,-</p>
         </div>
-        <div class="more_info">
-          <h3 class="brand">Nike</h3>
-          <h2 class="product_name">Blue T20 Indian Cricket Jersey</h2>
-          <p class="inventory_number">Inventory number 1163</p>
-          <h3 class="price">DKK 1595,-</h3>
-          <h3 class="sale_price">DKK 1560,-</h3>
-          <p class="color">Color: Blue</p>
-          <div class="size">
-            <p>Size</p>
-            <p>XXS</p>
-            <p>XS</p>
+
+        <p class="color">Color: <span class="color-indicator">Blue</span></p>
+
+        <div class="size_container">
+          <p>Size</p>
+          <div class="size_options">
+            <span class="size">XXS</span>
+            <span class="size">XS</span>
+            <span class="size">S</span>
+            <span class="size">M</span>
+            <span class="size">L</span>
+            <span class="size">XL</span>
+            <span class="size">XXL</span>
           </div>
-          <p>Add to cart</p>
         </div>
-      </section>
+
+        <button class="add-to-cart">Add to cart</button>
+      </div>
     </main>
 
     <footer></footer>
