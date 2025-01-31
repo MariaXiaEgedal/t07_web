@@ -8,6 +8,10 @@ img {
   max-width: 100%;
 }
 
+.product img {
+  width: 400px;
+}
+
 h1 {
   font-size: 200px;
   margin: -40px;
@@ -138,10 +142,7 @@ nav ul li a:hover {
 }
 
 /* Gør hvert produkt til en subgrid ??????*/
-.product,
-.product_onsale,
-.product_soldout,
-.product_onsale_soldout {
+.product {
   display: grid;
   grid-template-rows: subgrid;
   grid-row: span 2; /* Sørger for ensartet højde */
@@ -245,7 +246,7 @@ nav ul li a:hover {
 /* Bestemt product */
 .productContainer {
   display: flex;
-  gap: 20px; /* Afstand mellem billede og tekst */
+  gap: 35px; /* Afstand mellem billede og tekst */
   max-width: 900px; /* Maks bredde for at forhindre for stor strækning */
   margin: auto; /* Centrerer containeren på siden */
   margin-top: 60px;
@@ -350,7 +351,7 @@ nav ul li a:hover {
     display: flex;
     flex-direction: column; /* Ændrer fra række til kolonne */
     align-items: center; /* Centrerer elementer */
-    gap: 40px;
+    gap: 20px;
     margin: 0 20px;
   }
 }
