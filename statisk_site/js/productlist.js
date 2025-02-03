@@ -1,12 +1,13 @@
 const listContainer = document.querySelector(".product_list_container");
 
-fetch(`https://kea-alt-del.dk/t7/api/products/`)
+fetch(`https://kea-alt-del.dk/t7/api/products?limit=100`)
   .then((response) => response.json())
   .then((data) => showList(data));
 
 function showList(products) {
   console.log(products);
   let markup = "";
+
   products
     .map((product) => {
       markup += `
