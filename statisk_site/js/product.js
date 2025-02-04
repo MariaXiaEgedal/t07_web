@@ -4,12 +4,13 @@ const productId = 1165;
 fetch(`https://kea-alt-del.dk/t7/api/products/${productId}`)
   .then((response) => response.json())
   .then((data) => {
-    
+
     productContainer.innerHTML = `
     <figure class="image_container">
             <img
             src="https://kea-alt-del.dk/t7/images/webp/640/${data.id}.webp"
             alt=""
+            
             />
         </figure>
 
@@ -30,13 +31,11 @@ fetch(`https://kea-alt-del.dk/t7/api/products/${productId}`)
             <div class="size_container">
             <p>Size</p>
             <div class="size_options">
-             
                 <span class="size">XS</span>
                 <span class="size">S</span>
                 <span class="size">M</span>
                 <span class="size">L</span>
                 <span class="size">XL</span>
-
             </div>
             </div>
 

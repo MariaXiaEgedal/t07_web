@@ -11,7 +11,7 @@ function showList(products) {
   products
     .map((product) => {
       markup += `
-          <article class="product">
+          <article class="product ${product.discount && "onsale"} ${product.soldout && "soldout"}">
             <a href="product.html" class="product_link">
             <img
               src="https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp"
