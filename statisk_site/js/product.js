@@ -4,6 +4,7 @@ const productId = 1165;
 fetch(`https://kea-alt-del.dk/t7/api/products/${productId}`)
   .then((response) => response.json())
   .then((data) => {
+    
     productContainer.innerHTML = `
     <figure class="image_container">
             <img
