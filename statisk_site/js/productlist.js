@@ -92,8 +92,8 @@ function showProducts(data) {
             <p class="brand">${product.brandname}</p>
             <h3>${product.productdisplayname}</h3>
             <div class="price_container">
-              ${product.discount ? `<p class="old_price">${product.price},-</p>` : ""}
-              <p class="new_price">${discountedPrice},-</p>
+              ${product.discount ? `<p class="old_price">DKK ${product.price},-</p>` : ""}
+              <p class="new_price">DKK ${discountedPrice},-</p>
             </div>
           </div>
         </article>
