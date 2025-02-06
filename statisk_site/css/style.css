@@ -96,7 +96,7 @@ nav ul li {
 nav ul li a {
   color: white;
   text-decoration: none;
-  transition: color 0.3s ease-in-out text-shadow 0.2s ease-in-out;
+  transition: color 0.3s ease-in-out;
   letter-spacing: 2px; /* Giver mere afstand mellem bogstaver */
 }
 
@@ -183,7 +183,6 @@ nav ul li a:hover {
 }
 
 /* Produkter på udsalg */
-
 .discount-label {
   position: absolute;
   top: 6px;
@@ -191,6 +190,10 @@ nav ul li a:hover {
   background-color: #000000;
   padding: 5px 10px;
   z-index: 10;
+}
+
+.isOnSale {
+  visibility: visible;
 }
 
 .price_container {
