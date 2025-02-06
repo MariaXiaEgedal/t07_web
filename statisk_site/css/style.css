@@ -143,7 +143,7 @@ nav ul li a:hover {
 /* Gør hvert produkt til en subgrid ??????*/
 .product {
   display: grid;
-  grid-template-rows: subgrid;
+  grid-template-rows: auto 1fr auto; /* Definerer tre rækker: top, midte, bund */
   grid-row: span 2; /* Sørger for ensartet højde */
   gap: 0px; /* Justerer afstand for bedre alignment */
 }
