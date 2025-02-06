@@ -25,8 +25,6 @@ fetch(`https://kea-alt-del.dk/t7/api/products/${productId}`)
         <span class="soldout_label">Sold Out</span>
       </figure>
 
-      
-
       <div class="single_product_info">
         <h3 class="brand">${data.brandname}</h3>
         <h2 class="product_name">${data.productdisplayname}</h2>

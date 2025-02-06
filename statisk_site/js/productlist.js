@@ -84,7 +84,7 @@ function showProducts(data) {
                 src="https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp"
                 alt="${product.productdisplayname}"
               />
-              ${product.discount ? `<div class="discount-label">${product.discount}% OFF</div>` : ""}
+              ${product.discount ? `<div class="discount-label">${product.discount}%</div>` : ""}
               ${product.soldout ? `<div class="soldout_label">Udsolgt</div>` : ""}
             </div>
           </a>
